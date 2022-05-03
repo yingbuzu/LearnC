@@ -13,7 +13,10 @@ fi
 CURDIR=$1
 
 [ -z "$CURDIR" ] && CURDIR=$(basename "`pwd`")
-[ "$CURDIR" == "libsrcs" ] && exit 0
+if [ "$CURDIR" == "libsrcs" ]; then
+    echo 库代码不编译!
+    exit 0
+fi
 [ -e "$CURDIR" ] && rm -f "$CURDIR"
 
 ALLCFILES=`ls *.c`

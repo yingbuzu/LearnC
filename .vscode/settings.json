@@ -1,19 +1,11 @@
 {
+    "editor.suggestSelection": "first",
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
     "extensions.ignoreRecommendations": true,
 
     "terminal.integrated.shell.windows": "C:\\Windows\\system32\\cmd.exe",
-
-    /*
-    "code-runner.clearPreviousOutput": true,
-    "code-runner.saveAllFilesBeforeRun": true,
-    "code-runner.saveFileBeforeRun": true,
-    "code-runner.preserveFocus": true,
-
-    "code-runner.fileDirectoryAsCwd": true,
-
-    "code-runner.defaultLanguage": "c",
-    "code-runner.executorMap": {
-        "c": "\"$workspaceRoot\\.vscode\\tccrunner.bat\"",
-    }
-    // */
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
 }
