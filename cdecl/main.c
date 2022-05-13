@@ -126,7 +126,7 @@ static void _chk_arr()
     if (t == TAG_NUM)
         printf("[%d] of ", atoi(_curtok.name));
     else
-        printf(" of ");
+        printf("[] of ");
 
     if (t != ']' && gettoken() != ']')
         _errret("expect ']' end the array");
@@ -196,9 +196,10 @@ int main()
 {
     setjmp(_jmpbuf);
 
-    printf("===================\n"
+    printf("\n===================\n"
            "enter a c declarator: ");
 
+    top = -1;
     gettoken();
     if (_curtok.type == TAG_END) {
         printf("Quit!\n");
