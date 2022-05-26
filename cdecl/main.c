@@ -1,4 +1,4 @@
-
+﻿
 #include <stdio.h>
 #include <stdlib.h>
 #include <setjmp.h>
@@ -197,7 +197,7 @@ int main()
     setjmp(_jmpbuf);
 
     printf("\n===================\n"
-           "enter a c declarator: ");
+           "输入一个表达式: ");
 
     top = -1;
     gettoken();

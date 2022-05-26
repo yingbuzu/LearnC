@@ -13,7 +13,7 @@ fi
 CURDIR=$1
 
 [ -z "$CURDIR" ] && CURDIR=$(basename "`pwd`")
-if [ "$CURDIR" == "libsrcs" ]; then
+if [ "$CURDIR" = "libsrcs" ]; then
     echo 库代码不编译!
     exit 0
 fi
@@ -23,15 +23,19 @@ ALLCFILES=`ls *.c`
 LIBCFILES=`ls ../libsrcs/*.c 2>/dev/null`
 
 echo Compile $ALLCFILES $LIBCFILES ...
-cc -g -I../libsrcs -o $CURDIR $ALLCFILES $LIBCFILES
+cc -g -I../libsrcs -o $CURDIR.out $ALLCFILES $LIBCFILES
 if [ $? -gt 0 ]; then
     [ -d "$CURDIR.dSYM" ] && rm -rf "$CURDIR.dSYM"
+    [ -d "$CURDIR.out.dSYM" ] && rm -rf "$CURDIR.out.dSYM"
     exit 1
 fi
 [ -d "$CURDIR.dSYM" ] && rm -rf "$CURDIR.dSYM"
+[ -d "$CURDIR.out.dSYM" ] && rm -rf "$CURDIR.out.dSYM"
 
 echo Run ./$CURDIR , and output ...
 echo ===============================
 echo ""
 
-./$CURDIR
+./$CURDIR.out
+
+echo ""

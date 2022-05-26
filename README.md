@@ -21,3 +21,11 @@ C语言基础语法学习
 3.  按快捷键 Ctrl+Shift+B (Mac下: ⇧+⌘+B)即可编译本目录下的所有.c 为一个可执行文件，并执行。
 
 可以到 [西瓜 盈不足](https://www.ixigua.com/7093750280063287844?id=7093759091406799367)，[哔哩哔哩 盈不足](https://www.bilibili.com/video/BV1LF411M7Gy) 查看视频介绍。
+
+#### 代码列表
+
+- `video0`  Hello World
+- `cdecl`   C语言生命分析
+- `zhcode`  中文编程，99乘法表
+- `m99`     宏生成 99乘法表
+
