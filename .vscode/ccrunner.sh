@@ -23,7 +23,7 @@ ALLCFILES=`ls *.c`
 LIBCFILES=`ls ../libsrcs/*.c 2>/dev/null`
 
 echo Compile $ALLCFILES $LIBCFILES ...
-cc -g -I../libsrcs -o $CURDIR.out $ALLCFILES $LIBCFILES
+${CC:-cc} -g -I../libsrcs -o $CURDIR.out $ALLCFILES $LIBCFILES
 if [ $? -gt 0 ]; then
     [ -d "$CURDIR.dSYM" ] && rm -rf "$CURDIR.dSYM"
     [ -d "$CURDIR.out.dSYM" ] && rm -rf "$CURDIR.out.dSYM"
