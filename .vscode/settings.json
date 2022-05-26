@@ -3,7 +3,6 @@
 
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "files.encoding": "gbk",
 
     "extensions.ignoreRecommendations": true,
 
